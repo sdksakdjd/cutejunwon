@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{padding:0;margin:0}
+		li{list-style:none}
+		a{text-decoration:none;font-size:14px}
+		.menu {
+			width: 300px;
+			overflow: hidden;
+            margin-top: 5%;
+			margin-bottom: 0px;
+		}
+.menu > li {
+  width: 100%;
+  text-align: center;
+  line-height: 40px;
+  background-color: #5778ff;
+}
+.menu a {
+  color: #fff;
+}
+.submenu > li {
+  line-height: 50px;
+  background-color: #94a9ff;
+}
+.submenu {
+  height: 0; /*ul의 높이를 안보이게 처리*/
+  overflow: hidden;
+}
+.menu > li:hover {
+  background-color: #94a9ff;
+  transition-duration: 0.5s;
+}
+.menu > li:hover .submenu {
+  height: 250px; /*서브메뉴 li한개의 높이 50*5*/
+  transition-duration: 1s;
+}
+.btn3{
+    margin: 10px;
+    width: 10%;
+    height: 100%;
+    font-size: large;
+}
+    </style>
+</head>
+<body>
+    <button onclick="location.href='main1.html'" class="">메인으로</button>
+    <center>
+    <h1>
+        질병 검사
+    </h1>
+
+    <ul id="topMenu" class="menu">
+        <li><a href="#">통증</a>
+            <ul class="submenu">
+                <li><a href="#">가슴 통증</a></li>
+                <li><a href="#">두통</a></li>
+                <li><a href="researchbodypain.html">복부 통증</a></li>
+                <li><a href="#">사지 통증</a></li>
+            </ul>
+        </li>
+        <li><a href="#">출혈</a>
+            <ul class="submenu">
+                <li><a href="#">출혈경향</a></li>
+                <li><a href="#">혈뇨</a></li>
+                <li><a href="#">혈변 및 검은변</a></li>
+                <li><a href="#">토혈 및 각혈</a></li>
+            </ul>
+        </li>
+        <li><a href="#">전신 이상</a>
+            <ul class="submenu">
+                <li><a href="#">열</a></li>
+                <li><a href="#">피부질환</a></li>
+                <li><a href="#">황달</a></li>
+                <li><a href="#">체중감소 및 탈수</a></li>
+                <li><a href="#">체중 증가 및 부종</a></li>
+            </ul>
+        </li>
+        <li><a href="#">폐, 심장</a>
+            <ul class="submenu">
+                <li><a href="#">기침</a></li>
+                <li><a href="#">호흡곤란</a></li>
+                <li><a href="#">두근거림</a></li>
+            </ul>
+        </li>
+        <li><a href="#">소화기</a>
+            <ul class="submenu">
+                <li><a href="#">삼킴 곤란</a></li>
+                <li><a href="#">오심 및 구토</a></li>
+                <li><a href="#">소화 불량</a></li>
+                <li><a href="#">변비</a></li>
+            </ul>
+        </li>
+        <li><a href="#">비뇨기</a>
+            <ul class="submenu">
+                <li><a href="#">소변량 변화 및 배뇨시 이상</a></li>
+                <li><a href="#">혈뇨</a></li>
+            </ul>
+        </li>
+        <li><a href="#">정신 및 신경</a>
+            <ul class="submenu">
+                <li><a href="#">실신 및 의식 이상</a></li>
+                <li><a href="#">어지러움</a></li>
+                <li><a href="#">피로 및 수면 장애</a></li>
+                <li><a href="#">사지 힘 약화, 떨림 및 감각 이상</a></li>
+            </ul>
+        </li>
+        <li><a href="#">눈, 코, 입, 귀</a>
+            <ul class="submenu">   
+                <li><a href="#">눈 질환</a></li>
+                <li><a href="#">코 질환</a></li>
+                <li><a href="#">입 질환</a></li>
+                <li><a href="#">귀 질환</a></li>
+            </ul>
+        </li>
+    </ul>
+    
+    <button class="btn3">진단하러 가기</button>
+</center>
+</body>
+</html>

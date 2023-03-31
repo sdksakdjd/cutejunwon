@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form>
+    <h3>시작시기</h3>
+    <label><input type="checkbox" name="pain" value="급성"> 급성(갑자기)</label>
+    <label><input type="checkbox" name="pain" value="만성"> 만성(지속적)</label>
+    <p></p>
+    <h3>악화양상</h3>
+    <label><input type="checkbox" name="pain" value="악화 호전 반복">악화 호전 반복</label>
+    <label><input type="checkbox" name="pain" value="점점 악화">점점 악화</label>
+    <p></p>
+    <h3>통증양상</h3>
+    <label><input type="checkbox" name="pain" value="쥐어짜는">쥐어짜는</label>
+    <label><input type="checkbox" name="pain" value="쑤시는">쑤시는</label>
+    <label><input type="checkbox" name="pain" value="쓰라린">쓰라린</label>
+    <p></p>
+    <h3>발열 동반</h3>
+    <label><input type="checkbox" name="pain" value="발열없음">발열없음</label>
+    <label><input type="checkbox" name="pain" value="발열있음">발열있음</label>
+    <p></p>
+    <h3>통증위치</h3>
+    <label><input type="checkbox" name="pain" value="우상복부">우상복부</label>
+    <label><input type="checkbox" name="pain" value="상복부">상복부(명치)</label>
+    <label><input type="checkbox" name="pain" value="좌상복부">좌상복부</label>
+    <label><input type="checkbox" name="pain" value="우하복부">우하복부</label>
+    <label><input type="checkbox" name="pain" value="배꼽주변">배꼽주변</label>
+    <label><input type="checkbox" name="pain" value="좌하복부">좌하복부</label>
+    <label><input type="checkbox" name="pain" value="하복부">하복부</label>
+
+    <p></p>
+    <h3>동반증상(2가지 체크)</h3>
+    <label><input type="checkbox" name="pain" value="어깨 통증">어깨 통증</label>
+    <label><input type="checkbox" name="pain" value="오심 구토">오심 구토</label>
+    <label><input type="checkbox" name="pain" value="위산 역류">위산 역류</label>
+    <label><input type="checkbox" name="pain" value="내용물 양적 증가">내용물 양적 증가</label>
+    <label><input type="checkbox" name="pain" value="설사 변비">설사 변비</label>
+    <label><input type="checkbox" name="pain" value="자극적인 음식">자극적인 음식</label>
+    <label><input type="checkbox" name="pain" value="등 가슴 옆구리 통증">등 가슴 옆구리 통증</label>
+    <label><input type="checkbox" name="pain" value="누운 자세에서 통증 심해짐">누운 자세에서 통증 심해짐</label>
+    <label><input type="checkbox" name="pain" value="혈뇨 배뇨 이상">혈뇨 배뇨 이상</label>
+    <label><input type="checkbox" name="pain" value="탈수">탈수</label>
+    <label><input type="checkbox" name="pain" value="식은땀">식은땀</label>
+    <label><input type="checkbox" name="pain" value="소화불량">소화불량</label>
+    <label><input type="checkbox" name="pain" value="더부룩함">더부룩함</label>
+    <label><input type="checkbox" name="pain" value="다량의 변">다량의 변</label>
+    <label><input type="checkbox" name="pain" value="숨쉴 때 통증">숨쉴 때 통증</label>
+    <label><input type="checkbox" name="pain" value="피로감">피로감</label>
+    <label><input type="checkbox" name="pain" value="식욕 저하">식욕 저하</label>
+    <label><input type="checkbox" name="pain" value="황달">황달</label>
+    <label><input type="checkbox" name="pain" value="체중감소">체중감소</label>
+    <label><input type="checkbox" name="pain" value="잔변감">잔변감</label>
+    <label><input type="checkbox" name="pain" value="숙이면 호전">숙이면 호전</label>
+    <label><input type="checkbox" name="pain" value="오한">오한</label>
+    <label><input type="checkbox" name="pain" value="식욕 부진">식욕 부진</label>
+    <label><input type="checkbox" name="pain" value="배뇨 곤란">배뇨 곤란</label>
+    <label><input type="checkbox" name="pain" value="빈뇨">빈뇨</label>
+    <label><input type="checkbox" name="pain" value="무력감">무력감</label>
+    <label><input type="checkbox" name="pain" value="복부 팽만">복부 팽만</label>
+    <label><input type="checkbox" name="pain" value="혈변 검은변">혈변 검은변</label>
+    <label><input type="checkbox" name="pain" value="복부 불편감">복부 불편감</label>
+    <label><input type="checkbox" name="pain" value="쇼크">쇼크</label>
+
+    <p></p>
+    <button type="button" onclick="getChecked()">Submit</button>
+  </form>
+  
+  
+  <script type="text/javascript">
+    const doublearr = [['만성', '점점 악화', '쑤시는', '발열있음', '우상복부', '어깨 통증', '오심 구토'], ['만성', '악화 호전 반복', '쓰라린', '발열 없음', '상복부','위산 역류', '내용물 양적 증가'], ['만성', '악화 호전 반복', '쓰라린', '발열없음', '하복부', '설사 변비', '자극적인 음식'], ['만성', '악화 호전 반복', '쓰라린', '발열있음', '상복부', '등 가슴 옆구리 통증', '누운 자세에서 통증 심해짐'], ['만성', '악화 호전 반복', '쑤시는', '발열있음', '하복부', '오심 구토', '혈뇨 배뇨 이상'], ['급성', '점점 악화', '쥐어짜는', '발열있음', '상복부', '오심 구토', '탈수'], ['급성', '점점 악화', '쥐어짜는', '발열없음', '상복부', '오심 구토', '식은땀'], ['급성', '점점 악화', '쓰라린', '발열있음', '상복부', '오심 구토', '소화불량'], ['만성', '점점 악화', '쓰라린', '발열있음', '상복부', '오심 구토', '소화불량'], ['만성', '악화 호전 반복', '쓰라린', '발열없음', '하복부', '더부룩함', '다량의 변'], ['급성', '점점 악화', '쓰라린', '발열있음', '우상복부', '소화 불량', '숨쉴 때 통증'], ['만성', '점점 악화', '쓰라린', '발열있음', '우상복부', '소화 불량', '숨쉴 때 통증'], ['만성', '점점 악화', '쓰라린', '발열있음', '우상복부', '피로감', '식욕 저하'], ['만성', '점점 악화', '쓰라린', '발열없음', '우상복부', '황달', '체중감소'], ['만성', '악화 호전 반복', '쥐어짜는', '발열있음', '하복부', '잔변감', '혈변 검은변'], ['급성', '점점 악화', '쥐어짜는', '발열있음', '좌하복부', '어깨 통증', '숙이면 호전'], ['만성', '점점 악화', '쑤시는', '발열있음', '상복부', '피로감', '오한'], ['만성', '악화 호전 반복', '쓰라린', '발열있음', '상복부', '소화불량', '식욕 부진'], ['급성', '악화 호전 반복', '쑤시는', '발열없음', '상복부', '배뇨 곤란', '빈뇨'], ['만성', '악화 호전 반복', '쑤시는', '발열없음', '상복부', '배뇨 곤란', '빈뇨'], ['급성', '점점 악화', '쥐어짜는', '발열있음', '우상복부', '오심 구토', '식욕 부진'], ['만성', '점점 악화', '쥐어짜는', '발열있음', '우상복부', '피로', '무력감'], ['급성', '점점 악화', '쥐어짜는', '발열있음', '하복부', '오심 구토', '복부 팽만'], ['급성', '점점 악화', '쑤시는', '발열있음', '배꼽주변', '체중 감소', '복부 불편감'], ['만성', '점점 악화', '쑤시는', '발열있음', '배꼽주변', '체중 감소', '복부 불편감'], ['급성', '점점 악화', '쑤시는', '발열있음', '상복부', '복부 팽만', '쇼크'], ['만성', '점점 악화', '쑤시는', '발열있음', '상복부', '복부 팽만', '쇼크'], ['급성', '점점 악화', '쥐어짜는', '발열있음', '우하복부', '설사 변비', '숨쉴 때 통증']];
+
+    function getChecked() {//체크박스 값 배열로 만들기
+      const checkboxes = document.getElementsByName('pain');
+      
+      const checkedValues = [];
+
+      for (let i = 0; i < checkboxes.length; i++) {
+        if (checkboxes[i].checked) {
+          checkedValues.push(checkboxes[i].value);
+        }
+      }
+      console.log(checkArrayEquality(checkedValues, doublearr));
+      console.log(checkedValues);
+    }
+    
+
+    function checkArrayEquality(arr1, arr2) {
+      const results = [];
+      const bottleName = ['담석증', '역류성 식도염', '과민성 장증후군', '만성 췌장염', '요로 결석', '위장염', '위경련', '급성 위염', '만성 위염', '흡수장애 증후군', '급성 담낭염', '만성 담낭염', '경화성 담관염', '담관암', '대장암', '급성 췌장염', '폐렴', '위궤양', '급성 신장 결핵', '만성 신장 결핵', '급성 간염', '만성 간염', '장폐색', '급성 장간막 동맥 혈전등', '만성 장간막 동잭 혈전등', '급성 복막염', '만성 복막염', '맹장염'];
+
+      // arr1의 각 요소를 arr2의 각 요소와 비교하여 결과를 results 배열에 저장
+  
+      for (let i = 0; i < arr2.length; i++) {
+        if (Array.isArray(arr2[i])) { // 해당 원소가 배열인 경우
+          if (arr1[0] == arr2[i][0] && arr1[1] == arr2[i][1] && arr1[2] == arr2[i][2] && arr1[3] == arr2[i][3] && arr1[4] == arr2[i][4] && arr1[5] == arr2[i][5] && arr1[6] == arr2[i][6]) 
+          {
+            results.push(bottleName[i]);
+          }
+        }
+      }
+
+      return results;
+    }
+</script>
+  
+</body>
+</html>
